@@ -5,6 +5,7 @@ class Meeting < ApplicationRecord
   validates :location, presence: true
   validates :time, presence: true
 
-  # belongs_to :speaker
+  has_many :appointments
+  has_many :speakers, through: :appointments
 
 end

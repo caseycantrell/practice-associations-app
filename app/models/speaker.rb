@@ -4,6 +4,7 @@ class Speaker < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true
 
-  has_many :meetings
+  has_many :appointments
+  has_many :meetings, through: :appointments
 
 end
